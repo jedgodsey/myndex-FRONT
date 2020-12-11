@@ -23,6 +23,7 @@ class AddIndex extends React.Component {
           this.setState({list: data})
         })
     })
+    console.log('my query: ', this.state.query)
   }
 
   handleNameChange = (event) => {
@@ -107,7 +108,6 @@ class AddIndex extends React.Component {
             {this.state.selections.length > 0 && this.renderTags(this.state.selections, this.onRemoveTag)}
             <Box direction="row">
               <Search color="brand" />
-              {console.log('your value: ', this.state.query)}
               <TextInput
                 plain={true}
                 placeholder="Search and Select Companies"
